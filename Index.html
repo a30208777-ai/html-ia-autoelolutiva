@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aria Algorítmico</title>
+    <style>
+        body { font-family: sans-serif; background-color: #121212; color: #fff; text-align: center; padding: 50px; }
+        input { padding: 10px; width: 300px; }
+        button { padding: 10px; cursor: pointer; }
+        #resultado { margin-top: 20px; color: #00ff00; }
+    </style>
+</head>
+<body>
+
+    <h1>Aria Algorítmico</h1>
+    <input type="text" id="pergunta" placeholder="O que deseja pesquisar?">
+    <button onclick="enviarPergunta()">Pesquisar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function enviarPergunta() {
+            const pergunta = document.getElementById('pergunta').value;
+            // Aqui você faria o fetch para o seu app.py (Flask/FastAPI)
+            document.getElementById('resultado').innerText = "Processando: " + pergunta;
+        }
+    </script>
+</body>
+</html>
